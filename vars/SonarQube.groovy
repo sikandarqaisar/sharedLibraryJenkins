@@ -1,3 +1,5 @@
+
+/*
 import hudson.model.*
 import jenkins.model.*
 import hudson.plugins.sonar.*
