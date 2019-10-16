@@ -1,5 +1,4 @@
 
-/*
 import hudson.model.*
 import jenkins.model.*
 import hudson.plugins.sonar.*
@@ -78,4 +77,3 @@ Thread.start {
     // Save the state
     instance.save()
 }
-*/
