@@ -6,7 +6,7 @@ node {
     // Clone repo
 	git branch: 'master', 
     //	credentialsId: 'github', 
-	url: 'https://github.com/sikandarqaisar/my-app'
+	url: 'https://github.com/sikandarqaisar/sharedLibraryJenkins'
    
    }
    
