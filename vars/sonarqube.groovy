@@ -1,10 +1,10 @@
-def call(Map inputs){
+
 import hudson.model.*
 import jenkins.model.*
 import hudson.plugins.sonar.*
 import hudson.plugins.sonar.model.TriggersConfig
 import hudson.tools.*
-
+def call(Map inputs){
 // Required environment variables
 def sonar_name = "New setting"
 def sonar_server_url = "http://sonarqube:9000"
