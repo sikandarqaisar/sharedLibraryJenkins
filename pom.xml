@@ -1,4 +1,13 @@
-<!-- coverage -->
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>in.javahome</groupId>
+	<artifactId>myweb</artifactId>
+	<packaging>war</packaging>
+	<version>0.0.7-SNAPSHOT</version>
+	<name>my-app</name>
+	<url>http://maven.apache.org</url>	
+	
 <profile>
     <id>coverage</id>
     <build>
@@ -111,27 +120,7 @@
             </plugin>
         </plugins>
     </build>
-</profile>
-
-
-
-
-
-
-
-
-
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
-	<modelVersion>4.0.0</modelVersion>
-	<groupId>in.javahome</groupId>
-	<artifactId>myweb</artifactId>
-	<packaging>war</packaging>
-	<version>0.0.7-SNAPSHOT</version>
-	<name>my-app</name>
-	<url>http://maven.apache.org</url>	
-	
-	
+</profile>	
 	
 	<dependencies>
 		<!-- https://mvnrepository.com/artifact/org.jacoco/jacoco-maven-plugin -->
