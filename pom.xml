@@ -1,103 +1,46 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
-	<modelVersion>4.0.0</modelVersion>
-	<groupId>in.javahome</groupId>
-	<artifactId>myweb</artifactId>
-	<packaging>war</packaging>
-	<version>0.0.7-SNAPSHOT</version>
-	<name>my-app</name>
-	<url>http://maven.apache.org</url>	
+<project>
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>com.bogotobogo</groupId>
+  <artifactId>bogotobogo_JenkinsOnEC2</artifactId>
+  <packaging>jar</packaging>
+  <version>212.0-SNAPSHOT</version>
 
-	<dependencies>
-		<!-- https://mvnrepository.com/artifact/org.jacoco/jacoco-maven-plugin -->
-		<dependency>
-		    <groupId>org.jacoco</groupId>
-		    <artifactId>jacoco-maven-plugin</artifactId>
-		    <version>0.8.5</version>
-		</dependency>
-		<dependency>
-		    <groupId>org.apache.poi</groupId>
-		    <artifactId>poi</artifactId>
-		    <version>3.7</version>
-		</dependency>
+  <properties>
+    <maven.compiler.source>7</maven.compiler.source>
+    <maven.compiler.target>7</maven.compiler.target>
+  </properties>
 
-		<dependency>
-			<groupId>javax.servlet</groupId>
-			<artifactId>javax.servlet-api</artifactId>
-			<version>3.0.1</version>
-			<scope>provided</scope>
- 		</dependency>
-		<dependency>
-			<groupId>junit</groupId>
-			<artifactId>junit</artifactId>
-			<version>3.8.1</version>
-			<scope>test</scope>
-		</dependency>
-	
-	</dependencies>	
-	<build>
-	    <plugins>
-		    <plugin>
-			    <groupId>org.jacoco</groupId>
-			    <artifactId>jacoco-maven-plugin</artifactId>
-			    <version>0.7.7.201606060606</version>
-			    <executions>
-				<execution>
-				    <goals>
-					<goal>prepare-agent</goal>CodeOps
-				    </goals>
-				</execution>
-				<execution>
-				    <id>report</id>
-				    <phase>prepare-package</phase>
-				    <goals>
-					<goal>report</goal>
-				    </goals>
-				</execution>
-				<execution>
-				    <id>jacoco-check</id>
-				    <goals>
-					<goal>check</goal>
-				    </goals>
-				    <configuration>
-					<rules>
-					    <rule>
-						<limits>
-						    <limit>
-							<minimum>0.9</minimum>
-						    </limit>
-						</limits>
-					    </rule>
-					</rules>
-				    </configuration>
-				</execution>
-			    </executions>
-			</plugin>
-		    
-		    
-		    
-		    
-		    
-		<plugin>
-		    <groupId>org.jacoco</groupId>
-		    <artifactId>jacoco-maven-plugin</artifactId>
-		    <version>0.8.0</version>
-		    <executions>
-			<execution>
-			    <id>default-prepare-agent</id>
-			    <goals>
-				<goal>prepare-agent</goal>
-			    </goals>
-			</execution>
-			<execution>
-			    <id>default-report</id>
-			    <phase>prepare-package</phase>
-			    <goals>
-				<goal>report</goal>
-			    </goals>
-			</execution>
-		    </executions>
-		</plugin>
-	    </plugins>
-	</build>
+  <dependencies>
+    <dependency>
+      <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
+      <version>4.11</version>
+    </dependency>
+  </dependencies>
+
+ <build>
+  <plugins>
+    <plugin>
+      <groupId>org.jacoco</groupId>
+      <artifactId>jacoco-maven-plugin</artifactId>
+      <version>0.7.8</version>
+      <executions>
+        <execution>
+          <id>pre-unit-test</id>
+          <goals>
+            <goal>prepare-agent</goal>
+          </goals>
+        </execution>
+        <execution>
+          <id>post-unit-test</id>
+          <phase>test</phase>
+          <goals>
+            <goal>report</goal>
+          </goals>
+        </execution>
+      </executions>
+    </plugin>
+  </plugins>
+ </build>
+  
 </project>
