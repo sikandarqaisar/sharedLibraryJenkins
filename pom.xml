@@ -32,12 +32,12 @@
 	<distributionManagement>
 		 <snapshotRepository>
 		    <id>nexus</id>
-		    <url>https://github.com/sikandarqaisar/sharedLibraryJenkins/</url>
+		    <url>https://github.com/sikandarqaisar/my-app</url>
 		 </snapshotRepository>
 		
 		<repository>
 		    <id>nexus</id>
-		    <url>https://github.com/sikandarqaisar/sharedLibraryJenkins/</url>
+		    <url>https://github.com/sikandarqaisar/my-app</url>
 		</repository>
   	</distributionManagement>
 	
