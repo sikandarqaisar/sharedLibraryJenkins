@@ -30,42 +30,22 @@
 	
 	</dependencies>	
 <build>
-<plugin>
-    <groupId>org.jacoco</groupId>
-    <artifactId>jacoco-maven-plugin</artifactId>
-    <version>0.7.7.201606060606</version>
-    <executions>
-        <execution>
-            <goals>
-                <goal>prepare-agent</goal>CodeOps
-            </goals>
-        </execution>
-        <execution>
-            <id>report</id>
-            <phase>prepare-package</phase>
-            <goals>
-                <goal>report</goal>
-            </goals>
-        </execution>
-        <execution>
-            <id>jacoco-check</id>
-            <goals>
-                <goal>check</goal>
-            </goals>
+    <plugins>
+        <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-compiler-plugin</artifactId>
+            <version>3.6.1</version>
             <configuration>
-                <rules>
-                    <rule>
-                        <limits>
-                            <limit>
-                                <minimum>0.9</minimum>
-                            </limit>
-                        </limits>
-                    </rule>
-                </rules>
+                <source>1.7</source>
+                <target>1.7</target>
             </configuration>
-        </execution>
-    </executions>
-</plugin>
+        </plugin>
+	<plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-surefire-plugin</artifactId>
+            <version>2.19</version>
+        </plugin>
+    </plugins>
 </build>	
 	
 	
