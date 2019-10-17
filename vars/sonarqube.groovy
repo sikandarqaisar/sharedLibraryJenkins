@@ -1,6 +1,8 @@
 def call(Map inputs){
 Url=inputs.url
-gitBranch=inputs.gitBranch	
+gitBranch=inputs.gitBranch
+EmailFrom=inputs.EmailFrom
+EmailTo=inputs.EmailTo
 node {
    def sonarUrl = 'sonar.host.url=http://3.19.245.190:9000'
    def mvn = tool (name: 'maven3', type: 'maven') + '/bin/mvn'
@@ -22,7 +24,7 @@ node {
 		                       Job URL : ${env.JOB_URL}
 							   Job Name: ${env.JOB_NAME}
 Thanks,
-DevOps Team""", cc: '', from: 'sikandar@eurustechnologies.com', replyTo: '', subject: "${env.JOB_NAME} Success", to: 'sikandarqaisar@gmail.com'
+DevOps Team""", cc: '', from: EmailFrom, replyTo: '', subject: "${env.JOB_NAME} Success", to: EmailTo
    
    }
 }
