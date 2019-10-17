@@ -1,6 +1,6 @@
 def call(Map inputs){
 Url=inputs.url
-gitbranch=inputs.gitBranch
+gitBranch=inputs.gitbranch
 EmailFrom=inputs.EmailFrom
 EmailTo=inputs.EmailTo
 node {
