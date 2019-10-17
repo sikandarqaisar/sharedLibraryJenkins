@@ -1,11 +1,12 @@
 def call(Map inputs){
-Url=inputs.url		
+Url=inputs.url
+gitBranch=inputs.gitBranch	
 node {
    def sonarUrl = 'sonar.host.url=http://3.19.245.190:9000'
    def mvn = tool (name: 'maven3', type: 'maven') + '/bin/mvn'
    stage('SCM Checkout'){
     // Clone repo
-	git branch: 'master', 
+	git branch: gitBranch, 
     //	credentialsId: 'github', 
 	url: Url
    
