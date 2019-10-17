@@ -4,7 +4,7 @@ gitBranch=inputs.gitbranch
 EmailFrom=inputs.EmailFrom
 EmailTo=inputs.EmailTo
 node {
-   def sonarUrl = 'sonar.host.url=http://3.19.245.190:9000'
+   def sonarUrl = 'sonar.host.url=http://52.14.213.249:9000'
    def mvn = tool (name: 'maven3', type: 'maven') + '/bin/mvn'
    stage('SCM Checkout'){
 	git branch: gitBranch, 
