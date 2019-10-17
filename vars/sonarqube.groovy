@@ -1,4 +1,5 @@
 def call(Map inputs){
+Url=inputs.url	
 node {
    def sonarUrl = 'sonar.host.url=http://3.19.245.190:9000'
    def mvn = tool (name: 'maven3', type: 'maven') + '/bin/mvn'
@@ -6,7 +7,7 @@ node {
     // Clone repo
 	git branch: 'master', 
     //	credentialsId: 'github', 
-	url: 'https://github.com/sikandarqaisar/my-app'
+	url: Url
    
    }
    
