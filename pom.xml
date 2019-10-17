@@ -29,6 +29,6 @@
             </executions>
         </plugin>
     //other plugins
-    </build>
-</plugins>
+ </plugins>
+</build>    
 </project>
