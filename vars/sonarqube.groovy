@@ -1,8 +1,8 @@
 def call(Map inputs){
 Url=inputs.url	
-sonarUrl=inputs.sonarUrl	
+sonarUrrl=inputs.sonarUrl	
 node {
-   def sonarUrl = 'sonar.host.url=sonarUrl'
+   def sonarUrl = 'sonar.host.url=sonarUrrl'
    def mvn = tool (name: 'maven3', type: 'maven') + '/bin/mvn'
    stage('SCM Checkout'){
     // Clone repo
