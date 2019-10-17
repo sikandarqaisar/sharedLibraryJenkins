@@ -9,24 +9,8 @@
 	<packaging>jar</packaging>
 
 	<name>springboot</name>
-	<description>Project for Spring Boot Jenkins</description>
+	<description>Project for Spring Boot Jenkins</description>		
 
-
-		
-		
-		  <properties>
-		    <sonar.host.url>https://sonarcloud.io</sonar.host.url>
-		    <sonar.organization>mincong-h-github</sonar.organization>
-		  </properties>
-	
-		
-		
-		
-	
-		
-	
-	
-	
 	
 	<parent>
 		<groupId>org.springframework.boot</groupId>
@@ -34,7 +18,10 @@
 		<version>1.5.4.RELEASE</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
-
+  <properties>
+    <sonar.host.url>http://52.14.213.249:9000</sonar.host.url>
+    <sonar.organization>mincong-h-github</sonar.organization>
+  </properties>
 <!-- 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
