@@ -54,6 +54,13 @@
         <url>http://maven.apache.org</url>
 
 	<dependencies>
+		        <dependency>
+			    <groupId>org.codehaus.sonar-plugins.java</groupId>
+			    <artifactId>sonar-jacoco-listeners</artifactId>
+			    <version>${sonar-jacoco-listeners.version}</version>
+			    <scope>test</scope>
+			</dependency>
+		
 		<dependency>
 		    <groupId>org.apache.poi</groupId>
 		    <artifactId>poi</artifactId>
@@ -73,112 +80,10 @@
 			<scope>test</scope>
 		</dependency>
 	
-	</dependencies>
-	<!-- <distributionManagement>
-		 <snapshotRepository>
-		    <id>nexus</id>
-		    <url>http://172.31.15.236:8081/repository/maven-snapshots/</url>
-		 </snapshotRepository>
-		
-		<repository>
-		    <id>nexus</id>
-		    <url>http://172.31.15.236:8081/repository/maven-releases/</url>
-		</repository>
-  	</distributionManagement> -->
-	
+	</dependencies>	
 <build>
     <plugins>
-	    
-	    <plugin>
-			<groupId>org.jacoco</groupId>
-			<artifactId>jacoco-maven-plugin</artifactId>
-			<version>${jacoco.version}</version>
-			<executions>
-			<execution>
-			<goals>
-			<goal>prepare-agent</goal>
-			</goals>
-			</execution>
-			<execution>
-			<id>report</id>
-			<phase>prepare-package</phase>
-			<goals>
-			<goal>report</goal>
-			</goals>
-			</execution>
-			</executions>
-			</plugin>
-	    
-	    
-	    
-	    <plugin>
-		    <groupId>org.jacoco</groupId>
-		    <artifactId>jacoco-maven-plugin</artifactId>
-		    <version>0.7.7.201606060606</version>
-		    <executions>
-			<execution>
-			    <goals>
-				<goal>prepare-agent</goal>
-			    </goals>
-			</execution>
-			<execution>
-			    <id>report</id>
-			    <phase>prepare-package</phase>
-			    <goals>
-				<goal>report</goal>
-			    </goals>
-			</execution>
-		    </executions>
-		</plugin>
-	    
-	    
-	    
-	    
-	    
-        <plugin>
-            <groupId>org.apache.maven.plugins</groupId>
-            <artifactId>maven-compiler-plugin</artifactId>
-            <version>3.6.1</version>
-            <configuration>
-                <source>1.7</source>
-                <target>1.7</target>
-            </configuration>
-        </plugin>
-	<plugin>
-            <groupId>org.apache.maven.plugins</groupId>
-            <artifactId>maven-surefire-plugin</artifactId>
-            <version>2.19</version>
-        </plugin>
-    </plugins>
-</build>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<!-- coverage -->
-<profile>
-    <id>coverage</id>
-    <build>
-        <plugins>
-            <plugin>
+	               <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-surefire-plugin</artifactId>
                 <configuration>
@@ -248,23 +153,8 @@
                     </execution>
                 </executions>
             </plugin>
-        </plugins>
-    </build>
-    <dependencies>
-        <dependency>
-            <groupId>org.codehaus.sonar-plugins.java</groupId>
-            <artifactId>sonar-jacoco-listeners</artifactId>
-            <version>${sonar-jacoco-listeners.version}</version>
-            <scope>test</scope>
-        </dependency>
-    </dependencies>
-</profile>
-<!-- Integraton tests -->
-<profile>
-    <id>run-its</id>
-    <build>
-        <plugins>
-            <plugin>
+	    
+          <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-failsafe-plugin</artifactId>
                 <executions>
@@ -283,10 +173,88 @@
                         </goals>
                     </execution>
                 </executions>
-            </plugin>
-        </plugins>
-    </build>
-</profile>
+            </plugin>	    
+	    
+	    
+	    
+	    
+	    
+	    
+	    
+	    
+	    
+	    
+	    
+	    
+	    
+	    
+	    
+	    
+	    
+	    
+	    <plugin>
+			<groupId>org.jacoco</groupId>
+			<artifactId>jacoco-maven-plugin</artifactId>
+			<version>${jacoco.version}</version>
+			<executions>
+			<execution>
+			<goals>
+			<goal>prepare-agent</goal>
+			</goals>
+			</execution>
+			<execution>
+			<id>report</id>
+			<phase>prepare-package</phase>
+			<goals>
+			<goal>report</goal>
+			</goals>
+			</execution>
+			</executions>
+			</plugin>
+	    
+	    
+	    
+	    <plugin>
+		    <groupId>org.jacoco</groupId>
+		    <artifactId>jacoco-maven-plugin</artifactId>
+		    <version>0.7.7.201606060606</version>
+		    <executions>
+			<execution>
+			    <goals>
+				<goal>prepare-agent</goal>
+			    </goals>
+			</execution>
+			<execution>
+			    <id>report</id>
+			    <phase>prepare-package</phase>
+			    <goals>
+				<goal>report</goal>
+			    </goals>
+			</execution>
+		    </executions>
+		</plugin>
+	    
+	    
+	    
+	    
+	    
+        <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-compiler-plugin</artifactId>
+            <version>3.6.1</version>
+            <configuration>
+                <source>1.7</source>
+                <target>1.7</target>
+            </configuration>
+        </plugin>
+	<plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-surefire-plugin</artifactId>
+            <version>2.19</version>
+        </plugin>
+    </plugins>
+</build>
+
 
 
 
