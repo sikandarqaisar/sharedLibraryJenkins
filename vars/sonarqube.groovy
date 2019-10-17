@@ -15,6 +15,7 @@ node {
 	   withCredentials([string(credentialsId: 'jenkins-id', variable: 'sonarToken')]) {
         def sonarToken = "sonar.login=${sonarToken}"
         sh "${mvn} sonar:sonar -D${sonarUrl}  -D${sonarToken}"
+	 jacoco changeBuildStatus: true, sourcePattern: '**/src/'
 	 }
       
    }
