@@ -1,5 +1,4 @@
     <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-      
 	<!--  This format is used by SonarQube. If you need another format see "buildnumber-maven-plugin" -->
 	<maven.build.timestamp.format>MM.yyyy</maven.build.timestamp.format>
 	<yearMonth>${maven.build.timestamp}</yearMonth>    
