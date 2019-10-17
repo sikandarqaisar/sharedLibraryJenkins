@@ -8,7 +8,7 @@ node {
    def mvn = tool (name: 'maven3', type: 'maven') + '/bin/mvn'
    stage('SCM Checkout'){
 	git branch: gitBranch, 
-	url: Url  
+	url: 'https://github.com/sikandarqaisar/my-app'
    }
    
    stage('Sonar Publish'){
