@@ -5,32 +5,7 @@ EmailFrom=inputs.EmailFrom
 EmailTo=inputs.EmailTo
 node {
    def sonarUrl = 'sonar.host.url=http://52.14.213.249:9000'
-   def mvn = tool (name: 'maven3', type: 'maven') + '/bin/mvn'
-	# Metadata
-	sonar.projectName=${JOB_NAME}
-	sonar.projectVersion=1.0.0
-
-	# Source information
-	sonar.sources=src/
-	sonar.sourceEncoding=UTF-8
-	sonar.language=java
-
-	# Tests
-	sonar.tests=src/
-	sonar.junit.reportsPath=target/surefire-reports
-	sonar.surefire.reportsPath=target/surefire-reports
-	sonar.jacoco.reportPath=target/jacoco.exec
-	sonar.binaries=target/classes
-	sonar.java.coveragePlugin=jacoco
-
-	# Debug
-	sonar.verbose=true	
-
-	
-	
-	
-	
-	
+   def mvn = tool (name: 'maven3', type: 'maven') + '/bin/mvn'	
 	stage('SCM Checkout'){
 	git branch: gitBranch, 
 	url: Url
