@@ -4,7 +4,7 @@ import org.junit.Test;
 public class MathTest {
     
     @Test
-    public void testPass() {
+    public void passTest() {
         Assert.assertEquals(17, 17);
     }
 }
