@@ -42,7 +42,14 @@
           <version>2.22.0</version>          
           <configuration>
               <testFailureIgnore>false</testFailureIgnore>
+            <useSystemClassLoader>false</useSystemClassLoader>
           </configuration>
+        </plugin>
+        <plugin>
+            <artifactId>maven-failsafe-plugin</artifactId>
+            <configuration>
+                <useSystemClassLoader>false</useSystemClassLoader>
+            </configuration>
         </plugin>
         <plugin>
         <groupId>org.apache.maven.plugins</groupId>
