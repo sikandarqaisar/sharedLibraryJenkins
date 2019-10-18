@@ -1,8 +1,8 @@
 package com.coveros.demo.helloworld;
 
-public class Math {
+public class MyMath {
     int a, b;
-    Math(int a, int b) {
+    MyMath(int a, int b) {
         this.a = a;
         this.b = b;
     }
