@@ -20,6 +20,7 @@ node {
    }
    
    stage('Sonar Publish'){
+	   sh 'mvn clean install'
 	   executeScanner('Sonar-4.2','Sonar-6')	         
    }
 
