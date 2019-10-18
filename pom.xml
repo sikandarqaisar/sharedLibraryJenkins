@@ -41,7 +41,7 @@
             <artifactId>maven-surefire-plugin</artifactId>
             <version>3.0.0-M1</version>
             <configuration>
-                <forkCount>0</forkCount> <!-- changed this to 0 -->
+                <forkCount>1</forkCount> <!-- changed this to 0 -->
                 
                 <!-- <threadCount>1</threadCount> --> <!-- shall be used with 'parallel' -->
                 <printSummary>true</printSummary>
