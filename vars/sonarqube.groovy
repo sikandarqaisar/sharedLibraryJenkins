@@ -24,7 +24,6 @@ node {
 	   sh 'mvn package'
 	   sh 'mvn install'
 	   sh 'mvn test'
-	   sh 'mvn deploy'
 	   executeScanner('Sonar-4.2','sonar-8')	         
    }
 
