@@ -5,6 +5,6 @@ public class MathTest {
     
     @Test
     public void passTest() {
-        Assert.assertEquals(17, 17);
+        assertTrue( true );
     }
 }
