@@ -42,8 +42,12 @@
             <version>2.16</version>
             <configuration>
                 <forkCount>5</forkCount> <!-- changed this to 0 -->
-                <reuseForks>true</reuseForks>
-                <argLine>-Dnet.sf.ehcache.disabled=true</argLine>
+                <execution>
+                <id>default-prepare-agent</id>
+                <goals>
+                   <goal>prepare-agent</goal>
+                </goals>
+                </execution>
                 <!-- <threadCount>1</threadCount> --> <!-- shall be used with 'parallel' -->
                 <printSummary>true</printSummary>
                 <!-- <skipTests>false</skipTests> --> <!-- defaults to false -->
