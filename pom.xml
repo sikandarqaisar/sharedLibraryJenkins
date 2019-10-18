@@ -13,7 +13,20 @@
   <description>The most basic of Java programs.</description>
   <url>https://www.coveros.com/</url>
   <inceptionYear>2018</inceptionYear>
-
+  
+  
+  <dependencies>
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>4.8.1</version>
+            <scope>test</scope>
+        </dependency>
+    </dependencies>
+  
+  
+  
+  
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
