@@ -1,3 +1,5 @@
+package com.coveros.demo.helloworld;
+
 public class Math {
     int a, b;
     Math(int a, int b) {
