@@ -1,3 +1,11 @@
+def executeScanner(tool_name, server_name){
+  def scannerHome = tool "$tool_name";
+  withSonarQubeEnv("$server_name") {// If you have configured more than one global server connection, you can specify its name
+    sh "${scannerHome}/bin/sonar-scanner"
+  }
+}
+
+
 def call(Map inputs){
 Url=inputs.url
 gitBranch=inputs.gitbranch
@@ -12,14 +20,7 @@ node {
    }
    
    stage('Sonar Publish'){
-	   withCredentials([string(credentialsId: 'jenkins-id', variable: 'sonarToken')]) {
-        def sonarToken = "sonar.login=${sonarToken}"
-        sh "${mvn} sonar:sonar -D${sonarUrl}  -D${sonarToken}"
-	 jacoco changeBuildStatus: true, sourcePattern: '**/src/'	   
-		   
-		   
-	 }
-      
+	   executeScanner('Sonar-4.2','Sonar-6')	         
    }
 
 
