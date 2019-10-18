@@ -1,4 +1,5 @@
 package com.coveros.demo.helloworld;
+package com.coveros.demo.MyUnit;
 // import org.junit.Assert;
 // import org.junit.Before;
 // import static org.junit.Assert.*;
