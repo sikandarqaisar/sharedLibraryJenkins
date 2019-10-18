@@ -1,4 +1,4 @@
-package com.coveros.demo.MyMath;
+package com.coveros.demo.helloworld;
 
 public class MyMath {
     int a, b;
