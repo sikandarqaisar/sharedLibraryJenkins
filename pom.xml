@@ -93,6 +93,9 @@
                 <goals>
                     <goal>report</goal>
                 </goals>
+              <configuration>
+                <propertyName>jaCoCoArgLine</propertyName>
+             </configuration>
             </execution>
             <execution>
                 <id>default-check</id>
