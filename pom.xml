@@ -42,6 +42,8 @@
             <version>2.17</version>
             <configuration>
                 <forkCount>5</forkCount> <!-- changed this to 0 -->
+                <argLine>@{argLine} -Xmx1024m </argLine>
+                <reuseForks>false</reuseForks>
                 <execution>
                 <id>default-prepare-agent</id>
                 <goals>
