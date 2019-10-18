@@ -2,7 +2,7 @@ import org.junit.Assert;
 import org.junit.Before;
 import static org.junit.Assert.*;
 import org.junit.Test;
-import src.main.java.MyMath;
+import com.coveros.demo.MyMath;
 public class MathTest {
     MyMath math;
     @Before
