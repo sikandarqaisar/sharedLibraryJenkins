@@ -1,3 +1,4 @@
+package com.coveros.demo.helloworld;
 import org.junit.Assert;
 import org.junit.Before;
 import static org.junit.Assert.*;
