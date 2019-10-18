@@ -14,6 +14,15 @@ public class MathTest {
     public void testAdd() {
         Assert.assertEquals(17, math.add(7 , 10));
     }
+        public void testMulti() {
+        Assert.assertEquals(15, math.multiple(5 , 3));
+    } 
+    
+    
+    
+    
+    
+    
     
 //     @Test
 //     public void passTest() {
