@@ -4,10 +4,10 @@ import static org.junit.Assert.*;
 import org.junit.Test;
 
 public class MathTest {
-    Math math;
+    MyMath math;
     @Before
     public void setUp() throws Exception {
-        math = new Math(7, 10);
+        math = new MyMath(7, 10);
     }
     @Test
     public void testAdd() {
