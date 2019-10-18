@@ -42,7 +42,7 @@
             <version>3.0.0-M1</version>
             <configuration>
                 <forkCount>0</forkCount> <!-- changed this to 0 -->
-                <reuseForks>false</reuseForks>
+                
                 <!-- <threadCount>1</threadCount> --> <!-- shall be used with 'parallel' -->
                 <printSummary>true</printSummary>
                 <!-- <skipTests>false</skipTests> --> <!-- defaults to false -->
