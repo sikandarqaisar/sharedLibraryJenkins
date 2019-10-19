@@ -49,7 +49,7 @@
                    <append>true</append>
                </configuration> -->
                 <configuration>
-                  <destFile>${sonar.jacoco.reportPaths}</destFile>
+                  <destFile>${sonar.jacoco.reportPath}</destFile>
                 </configuration>
                 <executions>
                     <execution>
