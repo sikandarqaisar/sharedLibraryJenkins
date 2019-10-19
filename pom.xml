@@ -44,10 +44,10 @@
                 <groupId>org.jacoco</groupId>
                 <artifactId>jacoco-maven-plugin</artifactId>
                 <version>${jacoco.version}</version>
-                <configuration>
+<!--                 <configuration>
                    <destFile>${sonar.jacoco.reportPath}</destFile>
                    <append>true</append>
-               </configuration>
+               </configuration> -->
                 <executions>
                     <execution>
                         <goals>
