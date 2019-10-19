@@ -14,10 +14,10 @@ EmailTo=inputs.EmailTo
 node {
    def sonarUrl = 'sonar.host.url=http://18.218.252.174:9000'
    def mvn = tool (name: 'maven3', type: 'maven') + '/bin/mvn'	
-	stage('SCM Checkout'){
-	git branch: gitBranch, 
-	url: Url
-   }
+//	stage('SCM Checkout'){
+//	git branch: gitBranch, 
+//	url: Url
+ //  }
    
    stage('Sonar Publish'){
 	   sh 'mvn clean'
