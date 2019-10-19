@@ -48,6 +48,9 @@
                    <destFile>${sonar.jacoco.reportPath}</destFile>
                    <append>true</append>
                </configuration> -->
+                <configuration>
+                  <destFile>${sonar.jacoco.reportPaths}</destFile>
+                </configuration>
                 <executions>
                     <execution>
                         <goals>
