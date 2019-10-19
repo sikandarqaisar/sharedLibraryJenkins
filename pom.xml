@@ -44,10 +44,6 @@
                 <groupId>org.jacoco</groupId>
                 <artifactId>jacoco-maven-plugin</artifactId>
                 <version>${jacoco.version}</version>
-<!--                 <configuration>
-                   <destFile>${sonar.jacoco.reportPath}</destFile>
-                   <append>true</append>
-               </configuration> -->
                 <configuration>
                   <destFile>${sonar.jacoco.reportPath}</destFile>
                 </configuration>
@@ -64,7 +60,7 @@
                             <goal>report</goal>
                         </goals>
                     </execution>
-<!--                     <execution>
+                    <execution>
                         <id>jacoco-check</id>
                         <goals>
                             <goal>check</goal>
@@ -83,7 +79,7 @@
                                 </rule>
                             </rules>
                         </configuration>
-                    </execution> -->
+                    </execution>
                 </executions>
             </plugin>
 
