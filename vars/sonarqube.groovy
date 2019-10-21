@@ -19,6 +19,7 @@ node {
 	   sh 'mvn package'
 	   sh 'mvn install'
 	   sh 'mvn test'
+	   sh 'mvn sonar:sonar'
 	   executeScanner('Sonar-4.2','sonar-8')	         
    }
 	stage('jacoco'){
