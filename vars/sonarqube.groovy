@@ -21,8 +21,15 @@ node {
 	   sh 'mvn test'
 	   executeScanner('Sonar-4.2','sonar-8')	         
    }
+	stage('jacoco'){
+	    jacoco( 
+	      execPattern: 'target/*.exec',
+	      classPattern: 'target/classes',
+	      sourcePattern: 'src/main/java',
+	      exclusionPattern: 'src/test*')
 
-
+}
+	
 	
    stage('Email Notification'){
 		mail bcc: '', body: """Hi Team, You build successfully deployed
