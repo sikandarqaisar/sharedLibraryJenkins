@@ -12,7 +12,7 @@ gitBranch=inputs.gitbranch
 EmailFrom=inputs.EmailFrom
 EmailTo=inputs.EmailTo
 node {
-   def sonarUrl = 'sonar.host.url=http://18.218.252.174:9000'
+   def sonarUrl = 'sonar.host.url=http://52.27.136.95'
    def mvn = tool (name: 'maven3', type: 'maven') + '/bin/mvn'	
    stage('Sonar Publish'){
 	   sh 'mvn clean'
