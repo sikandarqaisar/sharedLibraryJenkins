@@ -30,11 +30,11 @@
              <version>3.2</version>
          </dependency>
          <!-- https://mvnrepository.com/artifact/org.jacoco/jacoco-maven-plugin -->
-         <dependency>
+<!--          <dependency>
              <groupId>org.jacoco</groupId>
              <artifactId>jacoco-maven-plugin</artifactId>
              <version>0.8.2</version>
-         </dependency>
+         </dependency> -->
          
          
 
