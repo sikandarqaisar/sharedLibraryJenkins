@@ -1,84 +1,74 @@
 <?xml version="1.0" encoding="UTF-8"?>
-
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
   xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
 
-  <groupId>org.jacoco</groupId>
-  <artifactId>org.jacoco.examples.maven</artifactId>
-  <version>0.8.0</version>
+  <groupId>com.coveros.demo</groupId>
+  <artifactId>helloworld</artifactId>
+  <version>1.1</version>
+  <packaging>jar</packaging>
 
-  <name>JaCoCo Maven plug-in example</name>
-  <url>http://www.jacoco.org/jacoco</url>
-    <properties>
-      <maven.compiler.source>1.8</maven.compiler.source>
-      <maven.compiler.target>1.8</maven.compiler.target>
-    </properties>
-  <dependencies>
-    <dependency>
-      <groupId>junit</groupId>
-      <artifactId>junit</artifactId>
-      <version>4.8.2</version>
-      <scope>test</scope>
-    </dependency>
-  
-     <dependency>
-      <groupId>org.codehaus.mojo</groupId>
-      <artifactId>sonar-maven-plugin</artifactId>
-      <version>3.2</version>
-      <type>pom</type>
-    </dependency>   
-    
-  </dependencies>
+  <name>Hello World</name>
+  <description>The most basic of Java programs.</description>
+  <url>https://www.coveros.com/</url>
+  <inceptionYear>2018</inceptionYear>
+
+  <properties>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+    <jdk.version>1.8</jdk.version>
+
+    <maven.compiler.plugin.version>3.8.1</maven.compiler.plugin.version>
+  </properties>
 
   <build>
     <plugins>
-     <plugin>
+        <plugin>
+            <groupId>org.jacoco</groupId>
+            <artifactId>jacoco-maven-plugin</artifactId>
+            <version>0.7.7.201606060606</version>
+            <executions>
+                <execution>
+                    <goals>
+                        <goal>prepare-agent</goal>CodeOps
+                    </goals>
+                </execution>
+                <execution>
+                    <id>report</id>
+                    <phase>prepare-package</phase>
+                    <goals>
+                        <goal>report</goal>
+                    </goals>
+                </execution>
+                <execution>
+                    <id>jacoco-check</id>
+                    <goals>
+                        <goal>check</goal>
+                    </goals>
+                    <configuration>
+                        <rules>
+                            <rule>
+                                <limits>
+                                    <limit>
+                                        <minimum>0.9</minimum>
+                                    </limit>
+                                </limits>
+                            </rule>
+                        </rules>
+                    </configuration>
+                </execution>
+            </executions>
+        </plugin>
+        <plugin>
         <groupId>org.apache.maven.plugins</groupId>
-        <artifactId>maven-surefire-plugin</artifactId>
+        <artifactId>maven-compiler-plugin</artifactId>
+        <version>${maven.compiler.plugin.version}</version>
         <configuration>
-          <forkCount>3</forkCount>
-          <reuseForks>true</reuseForks>
-          <argLine>-Xmx1024m -XX:MaxPermSize=256m</argLine>
+            <source>${jdk.version}</source>
+            <target>${jdk.version}</target>
         </configuration>
-      </plugin>
-      <plugin>
-        <groupId>org.jacoco</groupId>
-        <artifactId>jacoco-maven-plugin</artifactId>
-        <version>1.0.2</version>
-        <executions>
-          <execution>
-            <id>default-prepare-agent</id>
-            <goals>
-              <goal>prepare-agent</goal>
-            </goals>
-          </execution>
-          <execution>
-            <id>default-report</id>
-            <goals>
-              <goal>report</goal>
-            </goals>
-          </execution>
-          <execution>
-            <id>post-unit-test</id>
-            <goals>
-              <goal>report</goal>
-            </goals>
-            <configuration>
-          
-                <!-- implementation is needed only for Maven 2 -->
-                <dataFile>target/jacoco.exec</dataFile>
-                <outputDirectory>target-ut</outputDirectory>
-            </configuration>
-          </execution>
-        </executions>
-          <configuration>
-             <systemPropertyVariables>
-             <jacoco-agent.destfile>target/jacoco.exec</jacoco-agent.destfile>
-             </systemPropertyVariables>
-         </configuration>  
-      </plugin>
+        </plugin>
     </plugins>
   </build>
-
 </project>
