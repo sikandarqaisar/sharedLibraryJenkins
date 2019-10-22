@@ -10,7 +10,10 @@
 
   <name>JaCoCo Maven plug-in example</name>
   <url>http://www.jacoco.org/jacoco</url>
-
+    <properties>
+      <maven.compiler.source>1.6</maven.compiler.source>
+      <maven.compiler.target>1.6</maven.compiler.target>
+    </properties>
   <dependencies>
     <dependency>
       <groupId>junit</groupId>
