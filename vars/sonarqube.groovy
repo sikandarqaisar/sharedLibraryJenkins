@@ -20,7 +20,7 @@ node {
 	   sh 'mvn install'
 	   sh 'mvn test'
 	  // sh 'mvn sonar:sonar -Dsonar.host.url=http://34.212.168.221 -Dsonar.login=admin -Dsonar.password=0yakGXSe6Wwz'
-	   executeScanner('Sonar-4.2','sonar-7.8')	         
+	   executeScanner('Sonar-4.2','sonar-7.6')	         
    }
 	stage('jacoco'){
 	    jacoco( 
