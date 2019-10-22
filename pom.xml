@@ -86,7 +86,7 @@
               </goals>
               <!-- default target/jscoco/site/* -->
               <configuration>
-                <outputDirectory>target/</outputDirectory>
+                <outputDirectory>target/jacoco/</outputDirectory>
               </configuration>
             </execution>
           </executions>
