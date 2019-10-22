@@ -6,7 +6,6 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>com.mkyong.examples</groupId>
     <artifactId>maven-code-coverage</artifactId>
-    <packaging>jar</packaging>
     <version>1.0-SNAPSHOT</version>
 
     <properties>
@@ -14,21 +13,26 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <maven.compiler.source>1.8</maven.compiler.source>
         <maven.compiler.target>1.8</maven.compiler.target>
-        <junit.version>5.3.1</junit.version>
-        <jacoco.version>0.8.2</jacoco.version>
+
+
     </properties>
 
-    <dependencies>
+         <dependency>
+             <groupId>junit</groupId>
+             <artifactId>junit</artifactId>
+             <version>4.8.2</version>
+             <scope>test</scope>
+         </dependency>
 
-        <!-- junit 5, unit test -->
-        <dependency>
-           <groupId>junit</groupId>
-           <artifactId>junit</artifactId>
-           <version>4.8</version>
-           <scope>test</scope>
-        </dependency>
+         <dependency>
+             <groupId>org.sonarsource.scanner.maven</groupId>
+             <artifactId>sonar-maven-plugin</artifactId>
+             <version>3.2</version>
+         </dependency>
 
-    </dependencies>
+         
+         
+
     <build>
         <finalName>maven-code-coverage</finalName>
         <plugins>
