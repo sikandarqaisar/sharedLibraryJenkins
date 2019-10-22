@@ -17,13 +17,14 @@
 
     
 
-<!--          <dependency>
+          <dependency>
              <groupId>junit</groupId>
              <artifactId>junit</artifactId>
              <version>4.8.2</version>
              <scope>test</scope>
          </dependency>
 
+             <!--
          <dependency>
              <groupId>org.sonarsource.scanner.maven</groupId>
              <artifactId>sonar-maven-plugin</artifactId>
