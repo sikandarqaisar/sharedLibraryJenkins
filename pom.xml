@@ -24,7 +24,7 @@
         <dependency>
            <groupId>junit</groupId>
            <artifactId>junit</artifactId>
-           <version>4.4</version>
+           <version>4.8</version>
            <scope>test</scope>
         </dependency>
 
@@ -43,12 +43,21 @@
             <plugin>
                 <groupId>org.jacoco</groupId>
                 <artifactId>jacoco-maven-plugin</artifactId>
-                <version>${jacoco.version}</version>
-                <configuration>
-                  <destFile>${sonar.jacoco.reportPath}</destFile>
-                </configuration>
+                <version>0.7.9</version>
                 <executions>
-                     
+                 <execution>
+                     <id>pre-agent</id>                    
+                     <goals>
+                         <goal>prepare-agent</goal>
+                     </goals>
+                 </execution>
+                <execution>
+                     <id>report</id>    
+                     <phase>prepare-agent</phase>    
+                     <goals>
+                         <goal>report</goal>
+                     </goals>
+                 </execution>                     
                  <!--
                      Ensures that the code coverage report for unit tests is created after
                      unit tests have been run.
@@ -66,6 +75,11 @@
                          <outputDirectory>target/jacoco-ut</outputDirectory>
                      </configuration>
                  </execution>
+                     <configuration>
+                     <systemPropertyVariables>
+                      <jacoco-agent.destfile>target/jacoco.exec</jacoco-agent.destfile>
+                     </systemPropertyVariables>                                       
+                     </configuration>
 
                          
                          
