@@ -1,0 +1,6 @@
+projectKey=org.jacoco:org.jacoco.examples.maven
+serverUrl=http://localhost:9000
+serverVersion=7.6.0.21501
+dashboardUrl=http://localhost:9000/dashboard?id=org.jacoco%3Aorg.jacoco.examples.maven
+ceTaskId=AW31URl4YGvnue_NuYXI
+ceTaskUrl=http://localhost:9000/api/ce/task?id=AW31URl4YGvnue_NuYXI
