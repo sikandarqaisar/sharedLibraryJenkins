@@ -13,12 +13,6 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <maven.compiler.source>1.8</maven.compiler.source>
         <maven.compiler.target>1.8</maven.compiler.target>
-          <dependency>
-             <groupId>junit</groupId>
-             <artifactId>junit</artifactId>
-             <version>4.8.2</version>
-             <scope>test</scope>
-         </dependency>
 
 
              <!--
@@ -39,6 +33,12 @@
     <build>
         <finalName>maven-code-coverage</finalName>
         <plugins>
+                 <plugin>
+                      <groupId>junit</groupId>
+                      <artifactId>junit</artifactId>
+                      <version>4.8.2</version>
+                      <scope>test</scope>
+                 </plugin>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-surefire-plugin</artifactId>
