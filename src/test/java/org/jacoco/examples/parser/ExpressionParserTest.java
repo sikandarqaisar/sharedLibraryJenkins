@@ -46,6 +46,10 @@ public class ExpressionParserTest {
 	public void expression6() throws IOException {
 		assertExpression("2 * 3 + 2 * 5", 16);
 	}
+	@Test
+	public void expression6() throws IOException {
+		assertExpression("2 * 3 + 2 * 5", 16);
+	}
 
 	private static void assertExpression(final String expression,
 			final double expected) throws IOException {
